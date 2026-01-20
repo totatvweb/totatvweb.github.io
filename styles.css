@@ -71,7 +71,7 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .header-nav {
         position: absolute;
         top: 100px;
@@ -169,3 +169,4 @@ header {
     gap: 16px;
     color: rgb(0, 51, 101);
 }
+
