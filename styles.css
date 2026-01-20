@@ -1,8 +1,10 @@
 body {
     background: rgb(255, 255, 255);
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* HEADER */
 header {
     position: fixed;
     top: 0;
@@ -24,10 +26,11 @@ header {
     align-items: center;
 }
 
-.header-left img {
+.header-left a img {
     width: 123px;
 }
 
+/* HERO */
 .in-progress {
     padding-top: 100px;
     min-height: 80vh;
@@ -40,7 +43,6 @@ header {
 }
 
 .text {
-    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 600px;
     color: rgb(0, 51, 101);
@@ -94,40 +96,6 @@ header {
     }
 }
 
-main {
+.hidden {
     display: none;
 }
-
-/* main {
-    padding-top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 100px;
-    gap: 16px;
-    margin: 16px;
-}
-
-main div img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    transition-duration: 500ms;
-    box-shadow: 0 0 4px black;
-}
-
-main div:first-child {
-    grid-column: 1 / 3;
-    grid-row: 1 / 3;
-}
-
-main div:nth-child(2) {
-    grid-row: 1 / 6;
-}
-
-main div:nth-child(3) {
-    grid-row: 1 / 6;
-}
-
-main div img:hover {
-    scale: 1.03;
-} */
