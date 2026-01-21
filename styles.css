@@ -71,33 +71,84 @@ header {
     cursor: pointer;
 }
 
-@media (max-width: 900px) {
-    .header-nav {
-        position: absolute;
-        top: 100px;
-        right: 16px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        background: rgb(0, 34, 67);
-        padding: 16px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        opacity: 0;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 0.25s ease, transform 0.25s ease;
-    }
+/* MAIN */
+main {
+    padding-top: 100px;
+}
 
-    .header-nav.open {
-        opacity: 1;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
+/* NUESTRO EQUIPO */
+.our-team-title {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
 
-    .menu-toggle {
-        display: block;
-    }
+.our-team-title h2 {
+    background: rgb(0, 51, 101);
+    padding: 16px;
+    border-radius: 16px;
+    color: white;
+}
+
+.our-team-title div {
+    background: rgb(0, 51, 101);
+    width: 200px;
+    height: 5px;
+    border-radius: 16px;
+}
+
+.our-team-photocards {
+    height: calc(100vh - 210px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    position: relative;
+}
+
+.team-card {
+    position: relative;
+    width: 260px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 300ms ease;
+}
+
+.team-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px;
+    gap: 6px;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.team-card:hover .card-overlay {
+    opacity: 1;
 }
 
 /* SECCION EN PROGRESO */
@@ -160,7 +211,7 @@ header {
     visibility: hidden;
 }
 
-/* PAGINA VACIA */
+/* PÁGINA VACIA */
 .empty-page {
     min-height: 100vh;
     display: grid;
@@ -170,3 +221,63 @@ header {
     color: rgb(0, 51, 101);
 }
 
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .header-nav {
+        position: absolute;
+        top: 100px;
+        right: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        background: rgb(0, 34, 67);
+        padding: 16px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .header-nav.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .our-team-photocards {
+        height: auto;
+        padding: 32px 16px;
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .team-card {
+        width: 90%;
+        max-width: 320px;
+        height: 420px;
+    }
+
+    .card-overlay {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-card {
+        height: 380px;
+    }
+
+    .card-overlay h3 {
+        font-size: 18px;
+    }
+
+    .card-overlay p {
+        font-size: 14px;
+    }
+}
