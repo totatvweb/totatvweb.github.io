@@ -252,15 +252,13 @@ main {
 
     .our-team-photocards {
         height: auto;
-        padding: 32px 16px;
         flex-wrap: wrap;
         gap: 24px;
     }
 
     .team-card {
-        width: 90%;
-        max-width: 320px;
-        height: 420px;
+        width: 180px;
+        height: 300px;
     }
 
     .card-overlay {
@@ -270,14 +268,15 @@ main {
 
 @media (max-width: 480px) {
     .team-card {
-        height: 380px;
+        width: 150px;
+        height: 260Spx;
     }
 
     .card-overlay h3 {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .card-overlay p {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
